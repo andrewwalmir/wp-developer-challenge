@@ -1,0 +1,58 @@
+# Ignorando tudo na raiz do projeto
+/*
+
+# removendo ignore de .gitignore 
+!.gitignore
+!readme.md
+!robots.txt
+
+# removendo ignore de wp-content
+!wp-content/
+
+# ignorando tudo dentro de wp-content
+wp-content/*
+
+# removendo o ignore de wp-content/themes
+!wp-content/themes/
+
+# ignorando temas específicos e o index da pasta themes
+wp-content/themes/twenty*/
+wp-content/themes/index.php
+
+# ignore node dependency directories
+node_modules/
+
+# ignore log files and databases
+*.log
+*.sql
+*.sqlite
+
+# =======================
+
+# OS files
+ehthumbs.db
+Thumbs.db
+.DS.Store
+.DS_Store
+.DS.Store/*
+**/.DS.Store
+
+# Editor files
+.history
+
+# Blacklisted
+node_modules
+npm-debug.log
+update-notifier-nodemon.json
+coverage.*
+.nyc_output
+/dist
+/.config
+/.npm
+/*.zip
+/amorc
+*_debug_log.*
+/wp-config.php
+
+.idea
+.vscode

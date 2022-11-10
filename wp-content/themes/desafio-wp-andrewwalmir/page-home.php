@@ -15,7 +15,7 @@
     foreach ($videos_filmes as $v) { ?>
         <section class="hero js-image" data-bg="<?php echo get_field('video-cover-image', $v->ID) ?>">
             <dvi class="hero-content">
-                <span class="span-full"><?php echo get_the_terms(get_the_id(), 'categoria')[0]->name ?></span>
+                <span class="span-full"><?php echo get_the_terms($v->ID, 'categoria')[0]->name ?></span>
                 <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
                 <h1 class="title-h1"><?php echo $v->post_title ?> </h1>
                 <a href="<?php echo get_permalink($v->ID) ?>" class="btn-primary">Mais informações</a>

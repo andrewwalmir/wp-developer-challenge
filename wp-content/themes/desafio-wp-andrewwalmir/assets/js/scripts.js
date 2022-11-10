@@ -28,6 +28,15 @@ $(document).ready(function () {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
 
   $("#carrossel-series").slick({
@@ -39,15 +48,16 @@ $(document).ready(function () {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   });
-
-  // $("#videos-gallery").slick({
-  //   infinite: true,
-  //   slidesToShow: 4,
-  //   slidesToScroll: 1,
-  //   dots: true,
-  //   infinite: true,
-  // });
 
   $(".js-image").each(function () {
     var dataImage = $(this).attr("data-bg");

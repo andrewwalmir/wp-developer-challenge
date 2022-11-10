@@ -9,9 +9,7 @@
   - Footer
   - Category Video
   - Single Video
-
   - 404
-  - Others  
   
 ------------------------------------------------ */
 
@@ -110,9 +108,7 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb {
   background-color: #ff0000;
-
   border-radius: 3px;
-
   /* border: 2px solid #fffdfd; */
 }
 
@@ -154,6 +150,9 @@ p {
 }
 
 @media (max-width: 576px) {
+  p {
+    font-size: 1rem;
+  }
   .title-h1 {
     font-size: 3rem;
   }
@@ -404,10 +403,6 @@ p {
   .videos {
     padding: 40px 32px;
   }
-
-  .videos-movies {
-    /* display: flex; */
-  }
 }
 
 /* -----------------------------------------------------------------
@@ -528,8 +523,29 @@ p {
   color: #ffffff;
 }
 
+@media (max-width: 576px) {
+  .video-info {
+    padding: 140px 32px 40px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-trailler {
+    padding: 0px;
+    height: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-description {
+    padding: 40px 32px 80px 32px;
+  }
+}
+
 /* -----------------------------------------------------------------
-    - Single Video
+    - 404
 ----------------------------------------------------------------- */
 .hero-404 {
   height: 100vh;

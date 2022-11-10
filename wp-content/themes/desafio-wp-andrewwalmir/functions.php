@@ -10,12 +10,6 @@ function my_theme_setup()
         'width'       => 250,
         'header-text' => array('site-title', 'site-description'),
     ));
-
-    register_nav_menus(
-        array(
-            'primary' => 'Primary'
-        )
-    );
 }
 
 function themebs_enqueue_styles()
@@ -333,8 +327,6 @@ function cptui_register_my_taxes_categoria()
         "show_in_quick_edit" => false,
         "sort" => false,
         "show_in_graphql" => false,
-        // "default_term" => ['name' => 'Teste', 'slug' => 'clipes', 'description' => 'description teste'],
-
     ];
     register_taxonomy("categoria", ["videos"], $args);
 }

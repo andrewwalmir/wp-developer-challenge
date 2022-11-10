@@ -5,9 +5,7 @@
 <?php get_header(); ?>
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
         <main class="main">
-
             <section class="video-info">
                 <div class="video-info-content">
                     <span class="span-full"><?php echo get_the_terms(get_the_id(), 'categoria')[0]->name ?></span>

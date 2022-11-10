@@ -10,6 +10,12 @@ function my_theme_setup()
         'width'       => 250,
         'header-text' => array('site-title', 'site-description'),
     ));
+
+    register_nav_menus(
+        array(
+            'primary' => 'Primary'
+        )
+    );
 }
 
 function themebs_enqueue_styles()

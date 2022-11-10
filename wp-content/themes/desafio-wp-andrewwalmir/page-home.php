@@ -62,7 +62,7 @@
                     </a>
                 </div>
 
-                <div class="card-video">
+                <!-- <div class="card-video">
                     <a class="" href="">
                         <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
                         <span class="span-empty">130m</span>
@@ -100,7 +100,7 @@
                         <span class="span-empty">130m</span>
                         <h3 class="title-h3">Titanic</h3>
                     </a>
-                </div>
+                </div> -->
 
 
             </div>
@@ -135,7 +135,7 @@
                     </div>
                 <?php } ?>
 
-                <div class="card-video">
+                <!-- <div class="card-video">
                     <a class="" href="">
                         <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
                         <span class="span-empty">130m</span>
@@ -181,7 +181,7 @@
                         <span class="span-empty">130m</span>
                         <h3 class="title-h3">Titanic</h3>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </div>
@@ -216,7 +216,7 @@
                     </div>
                 <?php } ?>
 
-                <div class="card-video">
+                <!-- <div class="card-video">
                     <a class="" href="">
                         <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
                         <span class="span-empty">130m</span>
@@ -262,7 +262,7 @@
                         <span class="span-empty">130m</span>
                         <h3 class="title-h3">Titanic</h3>
                     </a>
-                </div>
+                </div> -->
 
             </div>
         </div>

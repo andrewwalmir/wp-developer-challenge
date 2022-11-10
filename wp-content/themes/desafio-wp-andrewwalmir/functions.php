@@ -30,33 +30,18 @@ function themebs_enqueue_scripts()
 {
     wp_enqueue_script(
         'my-jquery',
-        get_template_directory_uri() . '/assets/js/jquery-1.11.0.min.js',
+        get_template_directory_uri() . '/assets/js/jquery-3.4.1.min.js',
         array(),
-        '1.11.0',
-        true
-    );
-
-    // wp_enqueue_script(
-    //     'jquery-migrate',
-    //     get_template_directory_uri() . '/assets/js/jquery-migrate-1.2.1.min.js',
-    //     array(),
-    //     '1.2.1',
-    //     true
-    // );
-
-    wp_enqueue_script(
-        'popper',
-        'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',
-        array('jquery'),
-        '1.16.1',
+        '3.4.1',
         true
     );
 
     wp_enqueue_script(
         'slick',
         get_template_directory_uri() . '/assets/js/slick/slick.min.js',
-        array('popper'),
-        '1.8.1',
+        // array('popper'),
+        array(),
+        '1.0.0',
         true
     );
 
@@ -310,8 +295,7 @@ function cptui_register_my_cpts()
 
 add_action('init', 'cptui_register_my_cpts');
 
-
-function cptui_register_my_taxes()
+function cptui_register_my_taxes_categoria()
 {
 
     /**
@@ -349,7 +333,9 @@ function cptui_register_my_taxes()
         "show_in_quick_edit" => false,
         "sort" => false,
         "show_in_graphql" => false,
+        // "default_term" => ['name' => 'Teste', 'slug' => 'clipes', 'description' => 'description teste'],
+
     ];
     register_taxonomy("categoria", ["videos"], $args);
 }
-add_action('init', 'cptui_register_my_taxes');
+add_action('init', 'cptui_register_my_taxes_categoria');

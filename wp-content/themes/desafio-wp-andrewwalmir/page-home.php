@@ -27,7 +27,7 @@
 
         <div class="videos-movies" id="filmes">
             <h2 class="title-h2">Filmes</h2>
-            <div class="carrossel" id="videos-carrossel">
+            <div class="carrossel" id="carrossel-filmes">
                 <?php
                 $args_filmes = array(
                     'post_type' => 'videos',
@@ -53,12 +53,62 @@
                         </a>
                     </div>
                 <?php } ?>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+
             </div>
         </div>
 
         <div class="videos-docs" id="documentarios">
             <h2 class="title-h2">Documentários</h2>
-            <div class="carrossel" id="videos-carrossel">
+            <div class="carrossel" id="carrossel-documentarios">
                 <?php
                 $args_documentarios = array(
                     'post_type' => 'videos',
@@ -84,12 +134,61 @@
                         </a>
                     </div>
                 <?php } ?>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
             </div>
         </div>
 
         <div class="videos-series" id="series">
             <h2 class="title-h2">Séries</h2>
-            <div class="carrossel" id="videos-carrossel">
+            <div class="carrossel" id="carrossel-series">
                 <?php
                 $args_series = array(
                     'post_type' => 'videos',
@@ -116,6 +215,55 @@
                         </a>
                     </div>
                 <?php } ?>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
+                <div class="card-video">
+                    <a class="" href="">
+                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                        <span class="span-empty">130m</span>
+                        <h3 class="title-h3">Titanic</h3>
+                    </a>
+                </div>
+
             </div>
         </div>
 

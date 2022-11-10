@@ -6,7 +6,6 @@
 
 <main class="main">
     <section class="category-content">
-
         <div class="left" id="left">
             <h2 class="title-h2"><?php echo get_the_title() ?></h2>
             <p class="text-white"><?php echo get_the_content() ?></p>
@@ -31,18 +30,16 @@
                 <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
             <?php }
             foreach ($videos_filmes as $v) { ?>
-                <div class="card-video card-video-category">
-                    <a class="" href="<?php echo get_permalink($v->ID) ?>">
-                        <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
+                <div class="card-video-category">
+                    <a class="card-video-category-link" href="<?php echo get_permalink($v->ID) ?>">
+                        <img class="card-video-category-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
                         <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
                         <h3 class="title-h3"><?php echo $v->post_title ?></h3>
                     </a>
                 </div>
             <?php } ?>
         </div>
-
     </section>
-
 </main>
 
 <?php get_footer(); ?>

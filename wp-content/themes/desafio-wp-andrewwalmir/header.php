@@ -18,7 +18,7 @@
                 <img class="logotype" src="<?php echo get_template_directory_uri() . '/assets/images/logo-2.svg' ?>" alt="Logo Play">
             </a>
 
-            <div>
+            <div class="navbar-menu">
                 <?php
                 $args = array(
                     'menu' => 'Menu Principal',
@@ -29,6 +29,24 @@
                 wp_nav_menu($args);
                 ?>
             </div>
-
         </nav>
     </header>
+
+    <div class="navbar-menu-mobile">
+        <div class="navbar-menu-mobile-items">
+            <a class="navbar-menu-mobile-link" href="<?php echo get_site_url() . '/filmes' ?>">
+                <img class="logotype" src="<?php echo get_template_directory_uri() . '/assets/images/filmes.svg' ?>" alt="Filmes">
+                <p>Filmes</p>
+            </a>
+
+            <a class="navbar-menu-mobile-link" href="<?php echo get_site_url() . '/filmes' ?>">
+                <img class="logotype" src="<?php echo get_template_directory_uri() . '/assets/images/documentarios.svg' ?>" alt="Filmes">
+                <p>Documentários</p>
+            </a>
+
+            <a class="navbar-menu-mobile-link" href="<?php echo get_site_url() . '/filmes' ?>">
+                <img class="logotype" src="<?php echo get_template_directory_uri() . '/assets/images/series.svg' ?>" alt="Filmes">
+                <p>Séries</p>
+            </a>
+        </div>
+    </div>

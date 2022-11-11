@@ -32,7 +32,7 @@
                     <?php
                     $args_filmes = array(
                         'post_type' => 'videos',
-                        'numberposts' => 6,
+                        'numberposts' => 10,
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'categoria',
@@ -65,7 +65,7 @@
                     <?php
                     $args_documentarios = array(
                         'post_type' => 'videos',
-                        'numberposts' => 6,
+                        'numberposts' => 10,
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'categoria',
@@ -98,7 +98,7 @@
                     <?php
                     $args_series = array(
                         'post_type' => 'videos',
-                        'numberposts' => 6,
+                        'numberposts' => 10,
                         'tax_query' => array(
                             array(
                                 'taxonomy' => 'categoria',

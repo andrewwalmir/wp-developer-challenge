@@ -1,63 +1,63 @@
 $(document).ready(function () {
-  $("#carrossel-filmes").slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
+  // $("#carrossel-filmes").slick({
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
-  $("#carrossel-documentarios").slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
+  // $("#carrossel-documentarios").slick({
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
-  $("#carrossel-series").slick({
-    infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    dots: false,
-    arrows: false,
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    responsive: [
-      {
-        breakpoint: 576,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  });
+  // $("#carrossel-series").slick({
+  //   infinite: true,
+  //   slidesToShow: 5,
+  //   slidesToScroll: 1,
+  //   dots: false,
+  //   arrows: false,
+  //   infinite: true,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   responsive: [
+  //     {
+  //       breakpoint: 576,
+  //       settings: {
+  //         slidesToShow: 2,
+  //         slidesToScroll: 1,
+  //       },
+  //     },
+  //   ],
+  // });
 
   $(".js-image").each(function () {
     var dataImage = $(this).attr("data-bg");
@@ -69,3 +69,19 @@ $(document).ready(function () {
     );
   });
 });
+
+var checkbox = document.querySelector("#carrossel-filmes");
+
+var glide = new Glide("#options-hoverpause", {
+  hoverpause: checkbox.checked,
+  autoplay: 2000,
+  perView: 5,
+});
+
+checkbox.addEventListener("change", function () {
+  glide.update({
+    hoverpause: checkbox.checked,
+  });
+});
+
+glide.mount();

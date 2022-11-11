@@ -46,6 +46,14 @@ function themebs_enqueue_scripts()
     );
 
     wp_enqueue_script(
+        'slick',
+        get_template_directory_uri() . '/assets/js/glide.js',
+        array(),
+        '3.6.0',
+        true
+    );
+
+    wp_enqueue_script(
         'my-scripts',
         get_template_directory_uri() . '/assets/js/scripts.js',
         array(),

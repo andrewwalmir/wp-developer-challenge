@@ -20,7 +20,7 @@
 
             <section class="video-description">
                 <div class="video-description-content">
-                    <p><?php echo get_field('video-description') ?></p>
+                    <p><?php echo get_field('video-sinopse') ?></p>
                 </div>
             </section>
 

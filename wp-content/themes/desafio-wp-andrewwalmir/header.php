@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="<?php bloginfo('charset') ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?php bloginfo('name'); ?></title>
     <?php wp_head(); ?>
 </head>
@@ -14,16 +15,26 @@
             <a class="logo-link" href="<?php echo get_site_url() . '/' ?>">
                 <img class="logotype" src="<?php echo get_template_directory_uri() . '/assets/images/logo-2.svg' ?>" alt="Logo Play">
             </a>
-            <div class="navbar-menu">
-                <?php
-                $args = array(
-                    'menu' => 'Menu Principal',
-                    'theme_location' => 'menu-principal',
-                    'container' => false
-                );
-                wp_nav_menu($args);
-                ?>
-            </div>
+            <ul class="navbar-menu">
+                <li>
+                    <a href="<?php echo get_site_url() . '/filmes' ?>">Filmes</a>
+                </li>
+                <li>
+                    <a href="<?php echo get_site_url() . '/documentarios' ?>">Documentários</a>
+                </li>
+                <li>
+                    <a href="<?php echo get_site_url() . '/series' ?>">Séries</a>
+                </li>
+
+                <!-- <?php
+                        $args = array(
+                            'menu' => 'Menu Principal',
+                            'theme_location' => 'menu-principal',
+                            'container' => false
+                        );
+                        wp_nav_menu($args);
+                        ?> -->
+            </ul>
         </nav>
     </header>
 

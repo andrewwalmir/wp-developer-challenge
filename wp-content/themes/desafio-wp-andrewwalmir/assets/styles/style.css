@@ -149,7 +149,7 @@ p {
   margin: 0;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   p {
     font-size: 1rem;
   }
@@ -202,12 +202,13 @@ p {
 ----------------------------------------------------------------- */
 .header {
   background-color: #000000e6;
+  position: fixed;
+  background-position: center;
   width: 100%;
   height: 92px;
   padding: 0 140px;
   display: flex;
   align-items: center;
-  position: fixed;
   top: 0;
   z-index: 999;
 }
@@ -219,19 +220,19 @@ p {
   justify-content: space-between;
 }
 
-#menu-menu-principal li {
+.navbar-menu li {
   margin: 0 20px;
   padding: 0;
   letter-spacing: 0.57px;
   transition: 0.3s;
 }
 
-#menu-menu-principal li a {
+.navbar-menu li a {
   color: #ffffff;
   transition: 0.3s;
 }
 
-#menu-menu-principal li a:hover {
+.navbar-menu li a:hover {
   color: #ff0000;
 }
 
@@ -266,8 +267,8 @@ p {
 }
 
 .navbar-menu-mobile-link img {
-  width: 32px;
-  margin-bottom: 8px;
+  width: 24px;
+  margin-bottom: 4px;
 }
 
 .navbar-menu-mobile-link p {
@@ -276,7 +277,7 @@ p {
   margin: 0px;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .navbar {
     justify-content: center;
   }
@@ -313,7 +314,11 @@ p {
   color: #ffffff;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
+  .footer {
+    padding: 40px 32px 80px 32px;
+  }
+
   .info-footer {
     justify-content: center;
   }
@@ -365,7 +370,7 @@ p {
 }
 
 .carrossel {
-  /* display: flex; */
+  display: flex;
 }
 
 .card-video {
@@ -392,7 +397,7 @@ p {
   font-size: 600;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .hero {
     height: 80vh;
     padding: 32px;
@@ -453,7 +458,7 @@ p {
   margin-top: 20px;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .category-content {
     padding: 100px 32px;
     flex-wrap: wrap;
@@ -469,14 +474,14 @@ p {
   }
 
   .card-video-category {
-    width: 12rem;
+    width: 10rem;
     margin: 0 0 80px 0;
   }
 
   .card-video-category-image {
     margin-bottom: 40px;
-    width: 12rem;
-    height: 19rem;
+    width: 10rem;
+    height: 15rem;
     object-fit: cover;
   }
 }
@@ -523,7 +528,7 @@ p {
   color: #ffffff;
 }
 
-@media (max-width: 576px) {
+@media only screen and (max-width: 576px) {
   .video-info {
     padding: 140px 32px 40px 32px;
     display: flex;

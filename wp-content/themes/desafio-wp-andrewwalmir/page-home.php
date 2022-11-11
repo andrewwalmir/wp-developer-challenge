@@ -27,243 +27,199 @@
 
         <div class="videos-movies" id="filmes">
             <h2 class="title-h2">Filmes</h2>
-            <div class="carrossel" id="carrossel-filmes">
-                <?php
-                $args_filmes = array(
-                    'post_type' => 'videos',
-                    'numberposts' => 6,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'categoria',
-                            'field'    => 'slug',
-                            'terms'    => 'filmes',
+            <div class="carrossel swiper" id="carrossel-filmes">
+                <div class="swiper-wrapper">
+                    <?php
+                    $args_filmes = array(
+                        'post_type' => 'videos',
+                        'numberposts' => 6,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'categoria',
+                                'field'    => 'slug',
+                                'terms'    => 'filmes',
+                            ),
                         ),
-                    ),
-                );
-                $videos_filmes = get_posts($args_filmes);
-                if (!$videos_filmes) { ?>
-                    <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
-                <?php }
-                foreach ($videos_filmes as $v) { ?>
-                    <div class="card-video">
-                        <a class="" href="<?php echo get_permalink($v->ID) ?>">
-                            <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
-                            <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
-                            <h3 class="title-h3"><?php echo $v->post_title ?></h3>
-                        </a>
-                    </div>
-                <?php } ?>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
+                    );
+                    $videos_filmes = get_posts($args_filmes);
+                    if (!$videos_filmes) { ?>
+                        <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
+                    <?php }
+                    foreach ($videos_filmes as $v) { ?>
+                        <div class="card-video swiper-slide">
+                            <a class="" href="<?php echo get_permalink($v->ID) ?>">
+                                <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
+                                <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
+                                <h3 class="title-h3"><?php echo $v->post_title ?></h3>
+                            </a>
+                        </div>
+                    <?php } ?>
                 </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-
             </div>
         </div>
 
         <div class="videos-docs" id="documentarios">
             <h2 class="title-h2">Documentários</h2>
-            <div class="carrossel" id="carrossel-documentarios">
-                <?php
-                $args_documentarios = array(
-                    'post_type' => 'videos',
-                    'numberposts' => 6,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'categoria',
-                            'field'    => 'slug',
-                            'terms'    => 'documentarios',
+            <div class="carrossel swiper" id="carrossel-documentarios">
+                <div class="swiper-wrapper">
+                    <?php
+                    $args_documentarios = array(
+                        'post_type' => 'videos',
+                        'numberposts' => 6,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'categoria',
+                                'field'    => 'slug',
+                                'terms'    => 'documentarios',
+                            ),
                         ),
-                    ),
-                );
-                $videos_documentarios = get_posts($args_documentarios);
-                if (!$videos_documentarios) { ?>
-                    <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
-                <?php }
-                foreach ($videos_documentarios as $v) { ?>
-                    <div class="card-video">
-                        <a class="" href="<?php echo get_permalink($v->ID) ?>">
-                            <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
-                            <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
-                            <h3 class="title-h3"><?php echo $v->post_title ?></h3>
+                    );
+                    $videos_documentarios = get_posts($args_documentarios);
+                    if (!$videos_documentarios) { ?>
+                        <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
+                    <?php }
+                    foreach ($videos_documentarios as $v) { ?>
+                        <div class="card-video swiper-slide">
+                            <a class="" href="<?php echo get_permalink($v->ID) ?>">
+                                <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
+                                <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
+                                <h3 class="title-h3"><?php echo $v->post_title ?></h3>
+                            </a>
+                        </div>
+                    <?php } ?>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
                         </a>
                     </div>
-                <?php } ?>
 
-                <!-- <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
                 </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div> -->
-
             </div>
         </div>
 
         <div class="videos-series" id="series">
             <h2 class="title-h2">Séries</h2>
-            <div class="carrossel" id="carrossel-series">
-                <?php
-                $args_series = array(
-                    'post_type' => 'videos',
-                    'numberposts' => 6,
-                    'tax_query' => array(
-                        array(
-                            'taxonomy' => 'categoria',
-                            'field'    => 'slug',
-                            'terms'    => 'series',
+            <div class="carrossel swiper" id="carrossel-series">
+                <div class="swiper-wrapper">
+                    <?php
+                    $args_series = array(
+                        'post_type' => 'videos',
+                        'numberposts' => 6,
+                        'tax_query' => array(
+                            array(
+                                'taxonomy' => 'categoria',
+                                'field'    => 'slug',
+                                'terms'    => 'series',
+                            ),
                         ),
-                    ),
-                );
-                $videos_series = get_posts($args_series);
-                if (!$videos_series) { ?>
-                    <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
-                <?php }
-                foreach ($videos_series as $v) { ?>
+                    );
+                    $videos_series = get_posts($args_series);
+                    if (!$videos_series) { ?>
+                        <p class="empty-videos">Não há vídeos nessa categoria. ☹️</p>
+                    <?php }
+                    foreach ($videos_series as $v) { ?>
 
-                    <div class="card-video">
-                        <a class="" href="<?php echo get_permalink($v->ID) ?>">
-                            <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
-                            <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
-                            <h3 class="title-h3"><?php echo $v->post_title ?></h3>
+                        <div class="card-video swiper-slide">
+                            <a class="" href="<?php echo get_permalink($v->ID) ?>">
+                                <img class="card-video-image" src="<?php echo get_field('video-featured-image', $v->ID) ?>" alt="<?php echo the_title() ?>">
+                                <span class="span-empty"><?php echo get_field('video-duration', $v->ID) ?>m</span>
+                                <h3 class="title-h3"><?php echo $v->post_title ?></h3>
+                            </a>
+                        </div>
+                    <?php } ?>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
                         </a>
                     </div>
-                <?php } ?>
 
-                <!-- <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
+                    <div class="card-video swiper-slide">
+                        <a class="" href="">
+                            <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
+                            <span class="span-empty">130m</span>
+                            <h3 class="title-h3">Titanic</h3>
+                        </a>
+                    </div>
+
                 </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div>
-
-                <div class="card-video">
-                    <a class="" href="">
-                        <img class="card-video-image" src="<?php echo get_template_directory_uri() . '/assets/images/pexels-andrea-piacquadio-3760259.jpg' ?>">
-                        <span class="span-empty">130m</span>
-                        <h3 class="title-h3">Titanic</h3>
-                    </a>
-                </div> -->
-
             </div>
         </div>
 

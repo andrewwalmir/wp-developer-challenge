@@ -1,64 +1,4 @@
 $(document).ready(function () {
-  // $("#carrossel-filmes").slick({
-  //   infinite: true,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   dots: false,
-  //   arrows: false,
-  //   infinite: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 576,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // });
-
-  // $("#carrossel-documentarios").slick({
-  //   infinite: true,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   dots: false,
-  //   arrows: false,
-  //   infinite: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 576,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // });
-
-  // $("#carrossel-series").slick({
-  //   infinite: true,
-  //   slidesToShow: 5,
-  //   slidesToScroll: 1,
-  //   dots: false,
-  //   arrows: false,
-  //   infinite: true,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 576,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //       },
-  //     },
-  //   ],
-  // });
-
   $(".js-image").each(function () {
     var dataImage = $(this).attr("data-bg");
     $(this).css(
@@ -68,20 +8,20 @@ $(document).ready(function () {
         ")"
     );
   });
-});
 
-var checkbox = document.querySelector("#carrossel-filmes");
-
-var glide = new Glide("#options-hoverpause", {
-  hoverpause: checkbox.checked,
-  autoplay: 2000,
-  perView: 5,
-});
-
-checkbox.addEventListener("change", function () {
-  glide.update({
-    hoverpause: checkbox.checked,
+  const swiperFilmes = new Swiper(".carrossel", {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    // freeMode: true,
+    autoplay: {
+      delay: 4000,
+      disableOnInteraction: true,
+    },
+    breakpoints: {
+      576: {
+        slidesPerView: 2,
+        spaceBetween: 20,
+      },
+    },
   });
 });
-
-glide.mount();

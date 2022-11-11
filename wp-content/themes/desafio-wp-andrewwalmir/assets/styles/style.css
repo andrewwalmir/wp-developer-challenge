@@ -370,7 +370,7 @@ p {
 }
 
 .carrossel {
-  display: flex;
+  /* display: flex; */
 }
 
 .card-video {

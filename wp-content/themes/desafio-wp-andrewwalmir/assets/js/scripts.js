@@ -10,17 +10,18 @@ $(document).ready(function () {
   });
 
   const swiperFilmes = new Swiper(".carrossel", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 24,
-    // freeMode: true,
+    allowTouchMove: true,
+    pauseOnMouseEnter: true,
     autoplay: {
       delay: 4000,
       disableOnInteraction: true,
     },
     breakpoints: {
       576: {
-        slidesPerView: 2,
-        spaceBetween: 20,
+        slidesPerView: 5,
+        spaceBetween: 10,
       },
     },
   });

@@ -25,15 +25,6 @@
                 <li>
                     <a href="<?php echo get_site_url() . '/series' ?>">Séries</a>
                 </li>
-
-                <!-- <?php
-                        $args = array(
-                            'menu' => 'Menu Principal',
-                            'theme_location' => 'menu-principal',
-                            'container' => false
-                        );
-                        wp_nav_menu($args);
-                        ?> -->
             </ul>
         </nav>
     </header>
